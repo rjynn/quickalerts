@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/graybg" >
-   <TextView
+    android:background="@color/graybg"
+    android:orientation="vertical" >
+
+    <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,31 +49,83 @@
         android:textColor="@color/white" />
 </RadioGroup>
 
-    
-
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ratingRadios"
+        android:layout_marginTop="42dp"
+        android:text="Location to view:"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/TextView01"
-        android:src="@drawable/googlemap"
-        android:onClick="zoom" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/googlemap" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:text="View Modelled Data:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 
-<TextView
-    android:id="@+id/TextView01"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_below="@+id/ratingRadios"
-    android:layout_marginTop="42dp"
-    android:text="Location to view:"
-    android:textColor="@color/white"
-    android:textStyle="italic" />
+    <Button
+        android:id="@+id/button4"
+        style="@color/redish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/grayline"
+        android:text="Settings"
+        android:textColor="@color/white" />
 
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="7dp"
+        android:background="@color/grayline"
+        android:onClick="submit"
+        android:text="Submit"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:background="@color/grayline"
+        android:text="Update Case"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button4"
+        android:layout_toRightOf="@+id/button2"
+        android:background="@color/grayline"
+        android:onClick="viewData"
+        android:text="View Data"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

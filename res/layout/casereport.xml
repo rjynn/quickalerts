@@ -5,17 +5,6 @@
     android:background="@color/graybg" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="This was your submitted report"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
-    <TextView
         android:id="@+id/reportTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -138,5 +127,62 @@
         android:layout_alignLeft="@+id/ratingText"
         android:text="Location"
         android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/reportDisease"
+        android:background="@color/grayline"
+        android:onClick="submit"
+        android:text="Submit"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@color/redish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/grayline"
+        android:text="Settings"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button1"
+        android:background="@color/grayline"
+        android:text="Update Case"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button4"
+        android:layout_toRightOf="@+id/button2"
+        android:background="@color/grayline"
+        android:onClick="viewData"
+        android:text="View Data"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="This was your submitted report"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 
 </RelativeLayout>

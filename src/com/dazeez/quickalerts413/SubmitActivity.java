@@ -3,6 +3,7 @@ package com.dazeez.quickalerts413;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.EditText;
@@ -20,9 +21,27 @@ public class SubmitActivity extends Activity {
 		setContentView(R.layout.submit);
 		getActionBar().setDisplayShowTitleEnabled(false);
 		getActionBar().setDisplayShowHomeEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
 		EditText locationBox = (EditText) findViewById(R.id.editText1);
 		locationBox.setEnabled(false);
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			runOnUiThread(doFinish);
+			break;
+		}
+		
+		return (super.onOptionsItemSelected(item));
+	}
+	
+	private Runnable doFinish = new Runnable() {
+		public void run() {
+			finish();
+		}
+	};
 
 	public void caseReport(View view) {
 		EditText locationBox = (EditText) findViewById(R.id.editText1);

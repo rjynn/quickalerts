@@ -1,9 +1,12 @@
 package com.dazeez.quickalerts413;
 
 import java.text.SimpleDateFormat;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class caseReport extends Activity {
@@ -15,9 +18,25 @@ public class caseReport extends Activity {
 		setContentView(R.layout.casereport);
 		getActionBar().setDisplayShowTitleEnabled(false);
 		getActionBar().setDisplayShowHomeEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
 		populateReportFields();
 		
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			Intent intent = new Intent(this, HomeActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			break;
+		}
+		
+		return (super.onOptionsItemSelected(item));
+	}
+	
+	
 
 	@SuppressLint("SimpleDateFormat")
 	private void populateReportFields() {

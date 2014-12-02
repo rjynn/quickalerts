@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="@color/graybg">
+    android:layout_height="match_parent"
+    android:background="@color/graybg" >
 
     <TextView
         android:id="@+id/idText"
@@ -15,41 +15,44 @@
         android:textColor="@color/white"
         android:textStyle="italic" />
 
-<RadioGroup 
-    android:id="@+id/ratingRadios"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_below="@+id/dateText">
+    <RadioGroup
+        android:id="@+id/ratingRadios"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateText"
+        android:orientation="horizontal" >
 
-    <RadioButton
-        android:id="@+id/radioButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Very Confident"
-        android:textColor="@color/white"
-        android:onClick="onRadioButtonClicked"
-        android:textSize="12sp" />
-   
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confident"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:onClick="onRadioButtonClicked"
-        android:textSize="12dp" />
-    
-     <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not Confident"
-        android:textColor="@color/white"
-        android:onClick="onRadioButtonClicked"
-        android:textSize="12dp" />
-</RadioGroup>
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"
+            android:text="Very Confident"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"
+            android:text="Confident"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"
+            android:text="Not Confident"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/button1"
@@ -96,6 +99,7 @@
             android:id="@+id/GPS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked2"
             android:text="Via GPS"
             android:textColor="@color/white"
@@ -105,6 +109,7 @@
             android:id="@+id/Network"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked2"
             android:text="Via Network"
             android:textColor="@color/white"
@@ -115,6 +120,7 @@
             android:id="@+id/Manual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked2"
             android:text="Manual"
             android:textColor="@color/white"

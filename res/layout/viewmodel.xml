@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/graybg" >
-
-    <TextView
+   <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,37 +18,50 @@
     android:id="@+id/ratingRadios"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
     android:layout_below="@+id/textView1"
     android:orientation="horizontal" >
 
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/point"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:text="Circle"
-        android:textColor="@color/white" />
-
-    <RadioButton
-        android:id="@+id/RadioButton01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="46dp"
-        android:layout_weight="0.11"
+        android:layout_weight="1"
         android:text="Point"
+        android:onClick="onRadioButtonClicked"
+        android:textColor="@color/white" />
+    
+    <RadioButton
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Circle"
+        android:onClick="onRadioButtonClicked"
         android:textColor="@color/white" />
 
     <RadioButton
-        android:id="@+id/RadioButton02"
+        android:id="@+id/heat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.10"
+        android:layout_weight="1"
         android:text="Heat"
+        android:onClick="onRadioButtonClicked"
         android:textColor="@color/white" />
-
 </RadioGroup>
+
+    
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/TextView01"
+        android:src="@drawable/googlemap"
+        android:onClick="zoom" />
+
 
 <TextView
     android:id="@+id/TextView01"
@@ -62,24 +74,5 @@
     android:textColor="@color/white"
     android:textStyle="italic" />
 
-<ImageView
-    android:id="@+id/imageView1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/TextView01"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="17dp"
-    android:src="@drawable/googlemap" />
-
-<TextView
-    android:id="@+id/textView2"
-    android:layout_width="217dp"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
-    android:text="View Modelled Data:"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:textColor="@color/white"
-    android:textStyle="italic" />
 
 </RelativeLayout>

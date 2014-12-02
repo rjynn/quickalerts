@@ -23,6 +23,7 @@
         android:layout_below="@+id/button1"
         android:layout_marginTop="54dp"
         android:background="@color/redish"
+        android:onClick="goModel"
         android:text="View Model of Data"
         android:textColor="@color/white" />
 

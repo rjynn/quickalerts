@@ -5,24 +5,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomeActivity extends Activity {
-	
+public class viewDataActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
+		setContentView(R.layout.viewdata);
 		getActionBar().setDisplayShowTitleEnabled(false);
 		getActionBar().setDisplayShowHomeEnabled(false);
 	}
+	public void goModel(View view){
+		Intent i = new Intent(this, viewmodelActivity.class);
+		startActivity(i);
+	}
 	
 	public void submit(View view){
-		Intent i = new Intent(HomeActivity.this, SubmitActivity.class);
+		Intent i = new Intent(this, SubmitActivity.class);
 		startActivity(i);
 	}
-	
-	public void viewData(View view){
-		Intent i = new Intent(this, viewDataActivity.class);
-		startActivity(i);
-	}
-
 }

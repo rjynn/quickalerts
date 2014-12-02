@@ -49,24 +49,15 @@
         android:textColor="@color/white" />
 </RadioGroup>
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ratingRadios"
-        android:layout_marginTop="42dp"
-        android:text="Location to view:"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/TextView01"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
+        android:onClick="zoom"
         android:src="@drawable/googlemap" />
 
     <TextView
@@ -127,5 +118,16 @@
         android:onClick="viewData"
         android:text="View Data"
         android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ratingRadios"
+        android:layout_marginTop="20dp"
+        android:text="Location to view:"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 
 </RelativeLayout>

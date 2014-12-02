@@ -19,7 +19,7 @@ public class SubmitActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.submit);
 		getActionBar().setDisplayShowTitleEnabled(false);
-		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setDisplayShowHomeEnabled(true);
 		EditText locationBox = (EditText) findViewById(R.id.editText1);
 		locationBox.setEnabled(false);
 	}

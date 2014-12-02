@@ -11,7 +11,7 @@ public class viewmodelActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.viewmodel);
 		getActionBar().setDisplayShowTitleEnabled(false);
-		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setDisplayShowHomeEnabled(true);
 	}
 
 }

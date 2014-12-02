@@ -5,17 +5,6 @@
     android:background="@color/graybg">
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_marginBottom="22dp"
-        android:text="Location:"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
-    <TextView
         android:id="@+id/idText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,7 +54,7 @@
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
@@ -73,16 +62,6 @@
         android:onClick="caseReport"
         android:text="Submit Case Report"
         android:textColor="@color/white" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/locText"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Enter Disease Type" />
 
     <TextView
         android:id="@+id/locText"
@@ -99,23 +78,11 @@
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/editText1"
         android:layout_marginTop="80dp"
         android:text="How confident are you that this case is a possible case?"
         android:textColor="@color/white"
         android:textStyle="italic" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/idText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Enter Location of case report" />
 
     <RadioGroup
         android:id="@+id/locationRadio"
@@ -153,5 +120,41 @@
             android:textColor="@color/white"
             android:textSize="12dp" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_marginBottom="20dp"
+        android:text="Location:"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/idText"
+        android:layout_alignRight="@+id/idText"
+        android:layout_below="@+id/idText"
+        android:layout_marginTop="54dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter Location of case report" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/locText"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter Disease Type" />
 
 </RelativeLayout>

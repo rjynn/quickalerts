@@ -8,19 +8,127 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="This was your submitted report:"
+        android:layout_centerHorizontal="true"
+        android:text="This was your submitted report"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/white"
         android:textStyle="italic" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <TextView
+        android:id="@+id/reportID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/casereprt" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="40dp"
+        android:text="Report ID:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/reportTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reportID"
+        android:layout_below="@+id/reportID"
+        android:layout_marginTop="40dp"
+        android:text="Date Submitted:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/reportLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reportTime"
+        android:layout_below="@+id/reportTime"
+        android:layout_marginTop="40dp"
+        android:text="Location:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/reportRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reportLoc"
+        android:layout_below="@+id/reportLoc"
+        android:layout_marginTop="40dp"
+        android:text="Certainty:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/reportDisease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reportRating"
+        android:layout_below="@+id/reportRating"
+        android:layout_marginTop="40dp"
+        android:text="Disease:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/reportUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reportDisease"
+        android:layout_below="@+id/reportDisease"
+        android:layout_marginTop="40dp"
+        android:text="Date Updated:"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/updateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reportUpdate"
+        android:layout_alignBottom="@+id/reportUpdate"
+        android:layout_alignParentRight="true"
+        android:text="Update"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/diseaseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reportDisease"
+        android:layout_alignBottom="@+id/reportDisease"
+        android:layout_alignParentRight="true"
+        android:text="Disease"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/ratingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reportDisease"
+        android:layout_alignParentRight="true"
+        android:text="Rating"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/locText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reportRating"
+        android:layout_alignParentRight="true"
+        android:text="Location"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/idText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reportTime"
+        android:layout_alignParentRight="true"
+        android:text="ID"
+        android:textColor="@color/white" />
+    
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reportLoc"
+        android:layout_alignParentRight="true"
+        android:text="Date"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

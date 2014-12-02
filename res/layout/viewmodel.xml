@@ -6,7 +6,7 @@
     android:background="@color/graybg" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/idText"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/idText"
         android:text="Type of model:"
         android:textColor="@color/white"
         android:textStyle="italic" />
@@ -60,7 +60,7 @@
         android:id="@+id/RadioButton02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
+        android:layout_alignRight="@+id/idText"
         android:layout_below="@+id/textView1"
         android:text="Heat"
         android:textColor="@color/white" />

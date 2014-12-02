@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.TextureView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class SubmitActivity extends Activity {
 		getActionBar().setHomeButtonEnabled(true);
 		EditText locationBox = (EditText) findViewById(R.id.editText1);
 		locationBox.setEnabled(false);
+		Button btn = (Button) findViewById(R.id.Button01);
+		btn.setEnabled(false);
 	}
 	
 	@Override
@@ -113,5 +116,10 @@ public class SubmitActivity extends Activity {
 			break;
 
 		}
+	}
+	
+	public void viewData(View view){
+		Intent i = new Intent(this, viewDataActivity.class);
+		startActivity(i);
 	}
 }

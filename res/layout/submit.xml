@@ -2,8 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/graybg"
-    android:gravity="top" >
+    android:background="@color/graybg" >
+
+    <TextView
+        android:id="@+id/idText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Create a new case report"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 
     <RadioGroup
         android:id="@+id/ratingRadios"
@@ -16,6 +26,7 @@
             android:id="@+id/radioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked"
             android:text="Very Confident"
             android:textColor="@color/white"
@@ -25,6 +36,7 @@
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked"
             android:text="Confident"
             android:textColor="@color/white"
@@ -35,12 +47,13 @@
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked"
             android:text="Not Confident"
             android:textColor="@color/white"
             android:textSize="12dp" />
     </RadioGroup>
-
+    
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -86,6 +99,7 @@
             android:id="@+id/GPS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked2"
             android:text="Via GPS"
             android:textColor="@color/white"
@@ -95,6 +109,7 @@
             android:id="@+id/Network"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked2"
             android:text="Via Network"
             android:textColor="@color/white"
@@ -105,6 +120,7 @@
             android:id="@+id/Manual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onRadioButtonClicked2"
             android:text="Manual"
             android:textColor="@color/white"
@@ -146,7 +162,6 @@
         android:background="@color/white"
         android:ems="10"
         android:hint="Enter Disease Type" />
-
     <Button
         android:id="@+id/button4"
         style="@color/redish"
@@ -193,17 +208,5 @@
         android:onClick="submit"
         android:text="Submit"
         android:textColor="@color/white" />
-
-    <TextView
-        android:id="@+id/idText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button4"
-        android:layout_marginTop="17dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="Create a new case report"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
-</RelativeLayout>
+    
+    </RelativeLayout>

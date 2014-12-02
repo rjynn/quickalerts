@@ -45,9 +45,8 @@
          android:layout_alignParentTop="true"
          android:layout_toLeftOf="@+id/button4"
          android:background="@color/grayline"
-         android:onClick="viewData"
          android:text="View Data"
-         android:textColor="@color/white" />
+         android:textColor="@color/white" />"
 
      <Button
          android:id="@+id/button1"

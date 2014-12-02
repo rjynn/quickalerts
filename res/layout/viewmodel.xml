@@ -15,40 +15,39 @@
         android:textColor="@color/white"
         android:textStyle="italic" />
 
-    <RadioGroup
-        android:id="@+id/ratingRadios"
-        android:layout_width="fill_parent"
+<RadioGroup
+    android:id="@+id/ratingRadios"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textView1"
+    android:orientation="horizontal" >
+
+    <RadioButton
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:text="Point"
+        android:onClick="onRadioButtonClicked"
+        android:textColor="@color/white" />
+    
+    <RadioButton
+        android:id="@+id/circle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:orientation="horizontal" >
+        android:layout_weight="1"
+        android:text="Circle"
+        android:onClick="onRadioButtonClicked"
+        android:textColor="@color/white" />
 
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:text="Circle"
-            android:textColor="@color/white" />
-
-        <RadioButton
-            android:id="@+id/RadioButton01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="46dp"
-            android:layout_weight="0.11"
-            android:text="Point"
-            android:textColor="@color/white" />
-
-        <RadioButton
-            android:id="@+id/RadioButton02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.10"
-            android:text="Heat"
-            android:textColor="@color/white" />
-    </RadioGroup>
+    <RadioButton
+        android:id="@+id/heat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Heat"
+        android:onClick="onRadioButtonClicked"
+        android:textColor="@color/white" />
+</RadioGroup>
 
     <TextView
         android:id="@+id/TextView01"

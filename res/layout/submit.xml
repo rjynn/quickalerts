@@ -4,17 +4,6 @@
     android:layout_height="match_parent" 
     android:background="@color/graybg">
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Enter Location of case report" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -27,83 +16,51 @@
         android:textStyle="italic" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/idText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Create a new case report:"
+        android:text="Create a new case report"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/white"
         android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="46dp"
-        android:text="How confident are you that this case is a possible case?"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
+<RadioGroup 
+    android:id="@+id/ratingRadios"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/dateText">
 
     <RadioButton
         android:id="@+id/radioButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView3"
         android:text="Very Confident"
         android:textColor="@color/white"
+        android:onClick="onRadioButtonClicked"
         android:textSize="12sp" />
-
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/radioButton2"
-        android:layout_alignBottom="@+id/radioButton2"
-        android:layout_alignParentRight="true"
-        android:text="Not Confident"
-        android:textColor="@color/white"
-        android:textSize="12dp" />
-
+   
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
         android:text="Confident"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:onClick="onRadioButtonClicked"
         android:textSize="12dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/radioButton1"
-        android:layout_marginTop="55dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Enter Disease Type" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/textView4"
+    
+     <RadioButton
+        android:id="@+id/radioButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText2"
-        android:layout_marginBottom="22dp"
-        android:layout_toLeftOf="@+id/radioButton2"
-        android:text="Type of Disease:"
+        android:text="Not Confident"
         android:textColor="@color/white"
-        android:textStyle="italic" />
+        android:onClick="onRadioButtonClicked"
+        android:textSize="12dp" />
+</RadioGroup>
 
     <Button
         android:id="@+id/button1"
@@ -111,10 +68,90 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="44dp"
         android:background="@color/redish"
         android:onClick="caseReport"
         android:text="Submit Case Report"
         android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/locText"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter Disease Type" />
+
+    <TextView
+        android:id="@+id/locText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ratingRadios"
+        android:layout_marginTop="60dp"
+        android:text="Type of Disease:"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="80dp"
+        android:text="How confident are you that this case is a possible case?"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter Location of case report" />
+
+    <RadioGroup
+        android:id="@+id/locationRadio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/GPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked2"
+            android:text="Via GPS"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/Network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked2"
+            android:text="Via Network"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/Manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked2"
+            android:text="Manual"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </RadioGroup>
 
 </RelativeLayout>

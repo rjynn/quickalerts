@@ -14,7 +14,7 @@ public class caseReport extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.casereport);
 		getActionBar().setDisplayShowTitleEnabled(false);
-		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setDisplayShowHomeEnabled(true);
 		populateReportFields();
 		
 	}

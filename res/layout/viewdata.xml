@@ -2,69 +2,73 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/graybg" >
+    android:background="@color/graybg"
+    android:onClick="goModel" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="106dp"
-        android:background="@color/redish"
-        android:text="View Case Reports"
-        android:textColor="@color/white" />
+<Button
+    android:id="@+id/button001"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:background="@color/grayline"
+    android:onClick="submit"
+    android:text="Submit"
+    android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="54dp"
-        android:background="@color/redish"
-        android:onClick="goModel"
-        android:text="View Model of Data"
-        android:textColor="@color/white" />
+     <Button
+         android:id="@+id/button4"
+         style="@color/redish"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:background="@color/grayline"
+         android:text="Settings"
+         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/grayline"
-        android:onClick="submit"
-        android:text="Submit"
-        android:textColor="@color/white" />
+     <Button
+         android:id="@+id/button2"
+         android:layout_width="10dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_toLeftOf="@+id/button3"
+         android:layout_toRightOf="@+id/button001"
+         android:background="@color/grayline"
+         android:text="Update Case"
+         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/Button02"
-        android:background="@color/grayline"
-        android:text="Update Case" />
+     <Button
+         android:id="@+id/button3"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_toLeftOf="@+id/button4"
+         android:background="@color/grayline"
+         android:onClick="viewData"
+         android:text="View Data"
+         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button2"
-        android:background="@color/grayline"
-        android:text="View Data"
-        android:textColor="@color/white" />
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_alignLeft="@+id/Button01"
+         android:layout_below="@+id/button2"
+         android:layout_marginTop="100dp"
+         android:background="@color/redish"
+         android:text="View Case Reports"
+         android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button3"
-        android:background="@color/grayline"
-        android:text="Settings" />
+     <Button
+         android:id="@+id/Button01"
+         android:layout_width="wrap_content"
+         android:layout_height="30dp"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         android:background="@color/redish"
+         android:onClick="goModel"
+         android:text="View Model of Data"
+         android:textColor="@color/white" />
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ public class viewDataActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.viewdata);
 		getActionBar().setDisplayShowTitleEnabled(false);
-		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setDisplayShowHomeEnabled(true);
 	}
 	public void goModel(View view){
 		Intent i = new Intent(this, viewmodelActivity.class);

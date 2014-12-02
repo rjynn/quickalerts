@@ -4,40 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/graybg" >
-
-    <TextView
-        android:id="@+id/idText"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="View Modelled Data:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
-    <TextView
+   <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/idText"
+        android:layout_below="@+id/textView2"
         android:text="Type of model:"
         android:textColor="@color/white"
         android:textStyle="italic" />
+
 <RadioGroup
-        android:id="@+id/mapRadio"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:orientation="horizontal" >
-        
+    android:id="@+id/ratingRadios"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textView1"
+    android:orientation="horizontal" >
+
     <RadioButton
         android:id="@+id/point"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         android:layout_weight="1"
+        android:layout_weight="1"
         android:text="Point"
         android:onClick="onRadioButtonClicked"
         android:textColor="@color/white" />
@@ -55,22 +42,14 @@
         android:id="@+id/heat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:layout_weight="1"
+        android:layout_weight="1"
         android:text="Heat"
         android:onClick="onRadioButtonClicked"
         android:textColor="@color/white" />
-    </RadioGroup>
+</RadioGroup>
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/mapRadio"
-        android:layout_marginTop="22dp"
-        android:text="Location to view:"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
+    
+
 
     <ImageView
         android:id="@+id/imageView1"
@@ -82,5 +61,18 @@
         android:layout_below="@+id/TextView01"
         android:src="@drawable/googlemap"
         android:onClick="zoom" />
+
+
+<TextView
+    android:id="@+id/TextView01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/ratingRadios"
+    android:layout_marginTop="42dp"
+    android:text="Location to view:"
+    android:textColor="@color/white"
+    android:textStyle="italic" />
+
 
 </RelativeLayout>

@@ -53,4 +53,14 @@ public class viewmodelActivity extends Activity {
 
 		}
 	}
+	
+	public void goModel(View view){
+		Intent i = new Intent(this, viewmodelActivity.class);
+		startActivity(i);
+	}
+	
+	public void submit(View view){
+		Intent i = new Intent(this, SubmitActivity.class);
+		startActivity(i);
+	}
 }
